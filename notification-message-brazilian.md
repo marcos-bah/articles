@@ -6,7 +6,7 @@
 
 O plugin Flutter usa o [Firebase Cloud Messaging (FCM) API](https://firebase.google.com/docs/cloud-messaging/).
 
-Com esse plugin, sua aplicação em Flutter pode receber e processar notificações push bem como dados de mensagens no Android e IOS. Leia sobre [Firebase FCM Messages](https://firebase.google.com/docs/cloud-messaging/concept-options) para aprender mais sobre as diferenças entre mensagens de notificações e mensagens de dados.
+Com esse plugin, sua aplicação em Flutter pode receber e processar notificações push bem como dados de mensagens no Android e IOS. Leia sobre [Firebase FCM Messages](https://firebase.google.com/docs/cloud-messaging/concept-options) para aprender mais sobre as diferenças entre as mensagens de notificações e as mensagens de dados.
 
 Para plugins Flutter para outras finalidades no Firebase, veja [README.md](https://github.com/FirebaseExtended/flutterfire/blob/master/README.md).
 
@@ -17,7 +17,7 @@ Para usar esse plugin, adicione `firebase_messaging` como uma [dependência em s
 
 Cheque o diretorio de [`exemplo`](https://github.com/FirebaseExtended/flutterfire/tree/master/packages/firebase_messaging/example) para uma amostra de aplicação usando o Firebase Cloud Messaging.
 
-# Integração com o Android
+# Integração para Android
 
 Para integrar esse plugin a sua aplicação Android, siga os seguintes passos: 
 
@@ -56,11 +56,11 @@ Observe: Quando você for debugar no Android, use um dispositivo ou emulador AVD
   </intent-filter>
   ```
 
-### Lidar com segundo plano opcionalmente
+### Lidar com mensagens em segundo plano opcionalmente
 
 >Os tratamentos de mensagem em segundo plano devem ser rápidos, pois tarefas longas podem não ser permitidas pelo sistema Android. Veja mais em [Limites de Execução em Segundo Plano](https://developer.android.com/about/versions/oreo/background).
 
-Por padrão mensagens em plano de fundo não estão habilitadas, para lidar em plano de fundo:
+Por padrão mensagens em segundo plano não estão habilitadas, para habilitar:
 
 1. Adicione a dependência `com.google.firebase:firebase-messaging` no nível de sua aplicação, no arquivo `build.gradle` que geralmente se encontra em `<nome-aplicacao>/android/app/build.gradle`.
 
@@ -151,6 +151,6 @@ Por padrão mensagens em plano de fundo não estão habilitadas, para lidar em p
        );
    ```
 
-   Observe: `configure` deve ser chamado antecipadamente no ciclo de vida de sua aplicação que então possa ser lido para receber mensagens o mais cedo possível. Veja o [exemplo de aplicação](https://github.com/FirebaseExtended/flutterfire/tree/master/packages/firebase_messaging/example) para uma demostração.
+   Observe: `configure` deve ser chamado antecipadamente no ciclo de vida de sua aplicação, que então, possa ser lido para receber mensagens o mais cedo possível. Veja o [exemplo de aplicação](https://github.com/FirebaseExtended/flutterfire/tree/master/packages/firebase_messaging/example) para uma demostração.
    
    
